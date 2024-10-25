@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('company')->nullable(false);
             $table->string('departure_station')->nullable(false);
             $table->string('arrival_station')->nullable(false);
+            $table->date('departure_date')->nullable(false);
+            $table->date('arrival_date')->nullable(false);
             $table->time('departure_time');
             $table->time('arrival_time');
             $table->integer('number_of_carriages')->nullable(false)->unsigned();
