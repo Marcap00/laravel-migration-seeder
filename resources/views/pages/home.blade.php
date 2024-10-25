@@ -17,6 +17,10 @@
                             <h3 class="text-danger">
                                 Cancellato
                             </h3>
+                        @elseif ($train->on_time == true)
+                            <h3 class="text-success">
+                                In orario
+                            </h3>
                         @endif
                         <p class="card-text">
                             Compagnia: <span>{{ $train->company }}</span>
