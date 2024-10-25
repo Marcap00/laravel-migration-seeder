@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <h2 class="card-title mb-2">
                             {{ $train->train_code }}
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-train-subway"></i>
                         </h2>
                         <p class="card-text">
                             Compagnia: <span>{{ $train->company }}</span>
