@@ -13,6 +13,11 @@
                             {{ $train->train_code }}
                             <i class="fas fa-train-subway"></i>
                         </h2>
+                        @if ($train->deleted == true)
+                            <h3 class="text-danger">
+                                Cancellato
+                            </h3>
+                        @endif
                         <p class="card-text">
                             Compagnia: <span>{{ $train->company }}</span>
                         </p>
