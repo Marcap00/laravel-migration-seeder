@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('head-title', 'Laravel Template')
+@section('head-title', 'Laravel Train Schedule')
 
 @section('main-content')
 <main>
