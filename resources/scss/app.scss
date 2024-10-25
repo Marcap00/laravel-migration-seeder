@@ -79,10 +79,15 @@ ul {
     list-style: none;
 
     a {
+        &:visited {
+            color: #8b8b8b;
+        }
+
         &:hover {
             text-decoration: underline;
             color: #FF2D20;
         }
+
 
     }
 }
