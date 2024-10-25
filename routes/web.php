@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TrainController;
+use App\Models\Train;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::get('/', [TrainController::class, 'home'])->name('home');
