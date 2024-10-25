@@ -6,18 +6,18 @@
     <div class="container">
         <ul class="flex-align-center text-white my-3">
             <li>
-                <a href="{{ route('home') }}">
-                    <h2 class="me-2">In arrivo oggi</h2>
+                <a href="{{ route('showAll') }}">
+                    <h2 class="me-2">Tutti i treni</h2>
                 </a>
             </li>
             <li>
-                <a href="{{ route('showAll') }}">
-                    Tutti i treni
+                <a href="{{ route('home') }}">
+                    In arrivo oggi
                 </a>
             </li>
         </ul>
         <div class="row row-cols-4 row-cols-sm-1 row-cols-md-2 g-2">
-            @forelse ($trainsTodayDeparting as $train)
+            @forelse ($trains as $train)
             <div class="col my-2">
                 <div class="card">
                     <div class="card-body">

@@ -12,9 +12,16 @@ class TrainController extends Controller
         // Recupero i dati dei treni dal database
         /* $trains = Train::all(); */
         // Recpero i treni che stanno partendo oggi
-        $trains = Train::where('departure_date', date('Y-m-d'))->get();
+        $trainsTodayDeparting = Train::where('departure_date', date('Y-m-d'))->get();
         /* @dd($trains); */
 
-        return view('pages.home', compact('trains'));
+        return view('pages.home', compact('trainsTodayDeparting'));
+    }
+
+    public function showAll()
+    {
+        $trains = Train::all();
+
+        return view('pages.show_all', compact('trains'));
     }
 }
