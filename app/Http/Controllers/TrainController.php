@@ -18,10 +18,18 @@ class TrainController extends Controller
         return view('pages.home', compact('trainsTodayDeparting'));
     }
 
-    public function showAll()
+    public function allTrains()
     {
         $trains = Train::all();
 
-        return view('pages.show_all', compact('trains'));
+        return view('pages.trains', compact('trains'));
+    }
+
+    public function show($index)
+    {
+        $trains = Train::all();
+        $train = $trains[$index];
+
+        return view('pages.show', compact('train'));
     }
 }

@@ -77,16 +77,19 @@ h1 {
 
 ul {
     list-style: none;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+            color: #FF2D20;
+        }
+
+    }
 }
 
 a {
     text-decoration: none;
     color: #fff;
-
-    &:hover {
-        text-decoration: underline;
-        color: #FF2D20;
-    }
 }
 
 header,

@@ -6,18 +6,18 @@
     <div class="container">
         <ul class="flex-align-center text-white my-3">
             <li>
-                <a href="{{ route('home') }}">
-                    <h2 class="me-2">In arrivo oggi</h2>
+                <a href="{{ route('trains') }}">
+                    <h2 class="me-2">Tutti i treni</h2>
                 </a>
             </li>
             <li>
-                <a href="{{ route('trains') }}">
-                    Tutti i treni
+                <a href="{{ route('home') }}">
+                    In arrivo oggi
                 </a>
             </li>
         </ul>
         <div class="row row-cols-4 row-cols-sm-1 row-cols-md-2 g-2">
-            @forelse ($trainsTodayDeparting as $index => $train)
+            @forelse ($trains as $index => $train)
             <div class="col my-2">
                 <div class="card">
                     <a href="{{route('show', $index)}}">
