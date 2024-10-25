@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('arrival_station')->nullable(false);
             $table->time('departure_time');
             $table->time('arrival_time');
-            $table->integer('number_of_carriages')->nullable(false);
+            $table->integer('number_of_carriages')->nullable(false)->unsigned();
             $table->boolean('on_time')->nullable(false)->default(true);
             $table->boolean('deleted')->nullable(false)->default(false);
             $table->timestamps();
