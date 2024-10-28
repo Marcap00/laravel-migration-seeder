@@ -44,10 +44,10 @@
                                 Compagnia: <span>{{ $train->company }}</span>
                             </p>
                             <p class="card-text">
-                                Arrivo: <span>{{ $train->arrival_time }} {{ $train->getFormattedArrivalDate() }}, {{ $train->arrival_station }}</span>
+                                Arrivo: <span>{{ $train->getFormattedArrivalTime() }} {{ $train->getFormattedArrivalDate() }}, {{ $train->arrival_station }}</span>
                             </p>
                             <p class="card-text">
-                                Partenza: <span>{{ $train->departure_time }} {{ $train->getFormattedDepartureDate() }}, {{ $train->departure_station }}</span>
+                                Partenza: <span>{{ $train->getFormattedDepartureTime() }} {{ $train->getFormattedDepartureDate() }}, {{ $train->departure_station }}</span>
                             </p>
                         </div>
                     </a>

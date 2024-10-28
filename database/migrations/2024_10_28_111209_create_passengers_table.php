@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
+            $table->string('ticket_code')->unique();
             $table->string('number_carriage');
             $table->string('number_seat');
             $table->timestamps();

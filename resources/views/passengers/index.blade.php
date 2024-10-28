@@ -29,7 +29,7 @@
                         <div class="card-body">
                             <h2 class="card-title mb-2">
                                 <i class="fas fa-user"></i>
-                                {{ $passenger->name }}
+                                {{ $passenger->name }} {{ $passenger->surname }}
                             </h2>
 
                             <p class="card-text">

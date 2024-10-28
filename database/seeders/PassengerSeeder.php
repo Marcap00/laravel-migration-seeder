@@ -18,6 +18,7 @@ class PassengerSeeder extends Seeder
             $newPassenger = new Passenger();
             $newPassenger->name = $faker->firstName();
             $newPassenger->surname = $faker->lastName();
+            $newPassenger->ticket_code = $faker->unique()->bothify('???-########');
             $newPassenger->number_carriage = $faker->numberBetween(1, 20);
             $newPassenger->number_seat = $faker->numberBetween(1, 100);
             $newPassenger->save();
