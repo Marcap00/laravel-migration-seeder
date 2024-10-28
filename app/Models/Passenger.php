@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Passenger extends Model
 {
     use HasFactory;
+
+    public function getUpperCaseTicketCode()
+    {
+        return strtoupper($this->ticket_code);
+    }
 }
