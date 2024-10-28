@@ -15,6 +15,11 @@
                     Tutti i treni
                 </a>
             </li>
+            <li>
+                <a href="{{ route('passengers') }}">
+                    Tutti i passeggeri
+                </a>
+            </li>
         </ul>
         <div class="row row-cols-4 row-cols-sm-1 row-cols-md-2 g-2">
             @forelse ($trainsTodayDeparting as $index => $train)

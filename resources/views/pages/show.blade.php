@@ -15,6 +15,11 @@
                     Tutti i treni
                 </a>
             </li>
+            <li>
+                <a href="{{ route('passengers') }}">
+                    Tutti i passeggeri
+                </a>
+            </li>
         </ul>
             <div class="card">
                 <div class="card-body">
