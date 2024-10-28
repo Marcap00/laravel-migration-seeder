@@ -5,12 +5,14 @@
 <main>
     <div class="container">
         <ul class="flex-align-center text-white my-3">
+            @foreach ($links_pages as $route=>$text)
             <li>
-                <a href="{{ route('home') }}">
-                    <h2 class="me-2">In arrivo oggi</h2>
+                <a href="{{ route($route) }}">
+                    <h2 class="me-2">{{$text}}</h2>
                 </a>
             </li>
-            <li>
+            @endforeach
+            {{-- <li>
                 <a href="{{ route('trains') }}">
                     Tutti i treni
                 </a>
@@ -19,7 +21,7 @@
                 <a href="{{ route('passengers') }}">
                     Tutti i passeggeri
                 </a>
-            </li>
+            </li> --}}
         </ul>
         <div class="row row-cols-4 row-cols-sm-1 row-cols-md-2 g-2">
             @forelse ($trainsTodayDeparting as $index => $train)

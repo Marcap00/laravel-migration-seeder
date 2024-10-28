@@ -5,21 +5,13 @@
 <main>
     <div class="container">
         <ul class="flex-align-center text-white my-3">
+            @foreach ($links_pages as $route=>$text)
             <li>
-                <a href="{{ route('passengers') }}">
-                    <h2 class="me-2">Tutti i passeggeri</h2>
+                <a href="{{ route($route) }}">
+                    <h2 class="me-2">{{$text}}</h2>
                 </a>
             </li>
-            <li>
-                <a href="{{ route('home') }}">
-                    In arrivo oggi
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('trains') }}">
-                    Tutti i treni
-                </a>
-            </li>
+            @endforeach
         </ul>
         <div class="row row-cols-4 row-cols-sm-1 row-cols-md-2 g-2">
             @forelse ($passengers as $index => $passenger)
@@ -28,10 +20,13 @@
                     {{-- <a href="{{route('show', $index)}}"> --}}
                         <div class="card-body">
                             <h2 class="card-title mb-2">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user me-1"></i>
                                 {{ $passenger->name }} {{ $passenger->surname }}
                             </h2>
 
+                            <p class="card-text">
+                                Cod. Biglietto: <span>{{ $passenger->getUpperCaseTicketCode() }}</span>
+                            </p>
                             <p class="card-text">
                                 Numero posto: <span>{{ $passenger->number_seat }}</span>
                             </p>
