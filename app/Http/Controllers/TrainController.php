@@ -9,25 +9,29 @@ class TrainController extends Controller
 {
     public function home()
     {
-        // Recpero i treni che stanno partendo oggi
+        $links_pages = config('links_pages');
+        /* @dd($links_pages); */
+        // Recupero i treni che stanno partendo oggi
         $trainsTodayDeparting = Train::where('departure_date', date('Y-m-d'))->get();
         /* @dd($trains); */
 
-        return view('pages.home', compact('trainsTodayDeparting'));
+        return view('pages.home', compact('trainsTodayDeparting', 'links_pages'));
     }
 
     public function allTrains()
     {
+        $links_pages = config('links_pages');
         $trains = Train::all();
 
-        return view('pages.trains', compact('trains'));
+        return view('pages.trains', compact('trains', 'links_pages'));
     }
 
     public function show($index)
     {
+        $links_pages = config('links_pages');
         $trains = Train::all();
         $train = $trains[$index];
 
-        return view('pages.show', compact('train'));
+        return view('pages.show', compact('train', 'links_pages'));
     }
 }

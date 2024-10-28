@@ -9,8 +9,9 @@ class PassengerController extends Controller
 {
     public function allPassengers()
     {
+        $links_pages = config('links_pages');
         $passengers = Passenger::all();
 
-        return view('passengers.index', compact('passengers'));
+        return view('passengers.index', compact('passengers', 'links_pages'));
     }
 }
