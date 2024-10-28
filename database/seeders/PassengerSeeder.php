@@ -14,7 +14,7 @@ class PassengerSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             $newPassenger = new Passenger();
             $newPassenger->name = $faker->firstName();
             $newPassenger->surname = $faker->lastName();

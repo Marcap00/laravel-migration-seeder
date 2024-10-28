@@ -9,8 +9,6 @@ class TrainController extends Controller
 {
     public function home()
     {
-        // Recupero i dati dei treni dal database
-        /* $trains = Train::all(); */
         // Recpero i treni che stanno partendo oggi
         $trainsTodayDeparting = Train::where('departure_date', date('Y-m-d'))->get();
         /* @dd($trains); */
